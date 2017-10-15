@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="model.User" table="user">
+		<meta attribute="class-description">
+			This class contains the employee detail.
+		</meta>
+		<id name="userId" type="int" column="userid">
+			<generator class="native" />
+		</id>
+		<property name="login" column="login" type="string" />
+		<property name="vorname" column="vorname" type="string" />
+		<property name="nachname" column="nachname" type="string" />
+		<property name="strasse" column="strasse" type="string" />
+		<property name="plz" column="plz" type="string" />
+		<property name="ort" column="ort" type="string" />
+		<property name="telefonnummer" column="telefonnummer" type="string" />
+		<property name="password" column="password" type="string" />
+		<property name="salt" column="salt" type="string" />
+		<property name="aktiv" column="aktiv" type="boolean" />
+		<property name="version" column="version" type="long" />
+		<property name="anmeldeversuche" column="anmeldeversuche" type="int" />
+	</class>
+</hibernate-mapping>
